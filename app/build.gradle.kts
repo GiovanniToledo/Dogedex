@@ -50,4 +50,8 @@ dependencies {
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
+    implementation(libs.androidx.viewmodel.ktx)
+    implementation(libs.androidx.activity.ktx)
+    implementation(libs.com.square.retrofit2)
+    implementation(libs.com.square.moshi)
 }

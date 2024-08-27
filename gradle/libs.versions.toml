@@ -10,6 +10,9 @@ material = "1.10.0"
 activity = "1.9.1"
 constraintlayout = "2.1.4"
 org-jetbrains-kotlin-android = "1.9.0"
+lifecycleViewModelKtx = "2.8.4"
+activityKtx = "1.9.1"
+retrofit2 = "2.9.0"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -20,6 +23,10 @@ androidx-appcompat = { group = "androidx.appcompat", name = "appcompat", version
 material = { group = "com.google.android.material", name = "material", version.ref = "material" }
 androidx-activity = { group = "androidx.activity", name = "activity", version.ref = "activity" }
 androidx-constraintlayout = { group = "androidx.constraintlayout", name = "constraintlayout", version.ref = "constraintlayout" }
+androidx-viewmodel-ktx = { group = "androidx.lifecycle", name = "lifecycle-viewmodel-ktx", version.ref = "lifecycleViewModelKtx" }
+androidx-activity-ktx = { group = "androidx.activity", name = "activity-ktx", version.ref = "activityKtx" }
+com-square-retrofit2 = { group = "com.squareup.retrofit2", name = "retrofit", version.ref = "retrofit2"}
+com-square-moshi = { group = "com.squareup.retrofit2", name = "converter-moshi", version.ref = "retrofit2"}
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
