@@ -14,6 +14,7 @@ lifecycleViewModelKtx = "2.8.4"
 activityKtx = "1.9.1"
 retrofit2 = "2.9.0"
 kotlin-parcelize = "2.0.20"
+coilKtVersion = "2.7.0"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -28,6 +29,7 @@ androidx-viewmodel-ktx = { group = "androidx.lifecycle", name = "lifecycle-viewm
 androidx-activity-ktx = { group = "androidx.activity", name = "activity-ktx", version.ref = "activityKtx" }
 com-square-retrofit2 = { group = "com.squareup.retrofit2", name = "retrofit", version.ref = "retrofit2"}
 com-square-moshi = { group = "com.squareup.retrofit2", name = "converter-moshi", version.ref = "retrofit2"}
+io-coil-kt = {group = "io.coil-kt", name = "coil", version.ref = "coilKtVersion"}
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }

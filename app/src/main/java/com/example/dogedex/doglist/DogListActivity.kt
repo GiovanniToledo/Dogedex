@@ -9,14 +9,16 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.core.view.isVisible
+import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.dogedex.R
 import com.example.dogedex.api.ApiResponseStatus
 import com.example.dogedex.databinding.ActivityDogListBinding
 import com.example.dogedex.dogdetail.DogDetailActivity
 
-class DogListActivity : AppCompatActivity() {
+const val COLUMN_SPAN_COUNT = 3
 
+class DogListActivity : AppCompatActivity() {
     private val dogListViewMode: DogListViewModel by viewModels()
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -31,7 +33,7 @@ class DogListActivity : AppCompatActivity() {
 
 
         recycler.apply {
-            layoutManager = LinearLayoutManager(this@DogListActivity)
+            layoutManager = GridLayoutManager(this@DogListActivity, COLUMN_SPAN_COUNT)
             adapter = dogAdapter
         }
 

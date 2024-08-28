@@ -55,4 +55,5 @@ dependencies {
     implementation(libs.androidx.activity.ktx)
     implementation(libs.com.square.retrofit2)
     implementation(libs.com.square.moshi)
+    implementation(libs.io.coil.kt)
 }
