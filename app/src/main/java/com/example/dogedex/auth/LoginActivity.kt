@@ -2,12 +2,20 @@ package com.example.dogedex.auth
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import androidx.navigation.findNavController
 import com.example.dogedex.R
+import com.example.dogedex.databinding.ActivityLoginBinding
 
-class LoginActivity: AppCompatActivity() {
+class LoginActivity : AppCompatActivity(), LoginFragment.LoginFragmentActions {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_login)
+        val binding = ActivityLoginBinding.inflate(layoutInflater)
+        setContentView(binding.root)
+
+    }
+
+    override fun onRegisterButtonClick() {
+        findNavController(R.id.nav_host_fragment).navigate(LoginFragmentDirections.actionLoginFragmentToSignUpFragment())
     }
 }

@@ -4,4 +4,5 @@ plugins {
     alias(libs.plugins.jetbrains.kotlin.android) apply false
     alias(libs.plugins.org.jetbrains.kotlin.kapt) apply false
     alias(libs.plugins.org.jetbrains.kotlin.plugin.parcelize) apply false
+    alias(libs.plugins.navigation.safe.args.plugin) apply false // Safe Args Plugin
 }
