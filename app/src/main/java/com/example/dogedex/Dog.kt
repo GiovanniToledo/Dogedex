@@ -1,5 +1,9 @@
 package com.example.dogedex
 
+import android.os.Parcelable
+import kotlinx.parcelize.Parcelize
+
+@Parcelize
 class Dog(
     val id: Int,
     val index: Int,
@@ -12,6 +16,4 @@ class Dog(
     val temperament: String,
     val weightFemale: String,
     val weightMale: String
-) {
-
-}
+) : Parcelable

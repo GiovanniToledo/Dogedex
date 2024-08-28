@@ -1,5 +1,6 @@
 package com.example.dogedex.doglist
 
+import android.content.Intent
 import android.os.Bundle
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
@@ -12,6 +13,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.dogedex.R
 import com.example.dogedex.api.ApiResponseStatus
 import com.example.dogedex.databinding.ActivityDogListBinding
+import com.example.dogedex.dogdetail.DogDetailActivity
 
 class DogListActivity : AppCompatActivity() {
 
@@ -27,14 +29,22 @@ class DogListActivity : AppCompatActivity() {
         val dogAdapter = DogAdapter()
         val pbLoading = binding.pbLoading
 
+
         recycler.apply {
             layoutManager = LinearLayoutManager(this@DogListActivity)
             adapter = dogAdapter
         }
 
+        dogAdapter.setOnItemClickListener {
+            val intent = Intent(this, DogDetailActivity::class.java)
+            intent.putExtra(DogDetailActivity.DOG_KEY, it)
+            startActivity(intent)
+        }
+
         dogListViewMode.dogList.observe(this) { dogList ->
             dogAdapter.submitList(dogList)
         }
+
         dogListViewMode.status.observe(this) { status ->
             when(status) {
                 is ApiResponseStatus.Loading -> {
