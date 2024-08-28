@@ -48,17 +48,20 @@ class DogListActivity : AppCompatActivity() {
         }
 
         dogListViewMode.status.observe(this) { status ->
-            when(status) {
+            when (status) {
                 is ApiResponseStatus.Loading -> {
                     pbLoading.isVisible = true
                 }
+
                 is ApiResponseStatus.Error -> {
                     pbLoading.isVisible = false
-                    Toast.makeText(this, "Error on loading data!", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(this, status.message, Toast.LENGTH_SHORT).show()
                 }
+
                 is ApiResponseStatus.Success -> {
                     pbLoading.isVisible = false
                 }
+
                 else -> {
                     pbLoading.isVisible = false
                     Toast.makeText(this, "Status not implemented!", Toast.LENGTH_SHORT).show()

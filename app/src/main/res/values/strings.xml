@@ -19,4 +19,10 @@
     <string name="password_must_not_be_empty">Password must not be empty!</string>
     <string name="password_confirm_must_not_be_empty">Password must not be empty!</string>
     <string name="passwords_do_not_match">Password do not match!</string>
+    <string name="unknown_host_exception">There is no internet connection</string>
+    <string name="error_signing_up">Error signing up!</string>
+    <string name="error_loging_in">Error loging in!</string>
+    <string name="user_already_exist">User already exist!</string>
+    <string name="unknown_error">There was an error!</string>
+    <string name="wrong_user_or_pass">Wrong user email or password!</string>
 </resources>

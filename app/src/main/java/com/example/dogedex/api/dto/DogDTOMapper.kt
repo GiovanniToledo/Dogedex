@@ -1,9 +1,9 @@
 package com.example.dogedex.api.dto
 
-import com.example.dogedex.Dog
+import com.example.dogedex.domain.Dog
 
 class DogDTOMapper {
-    private fun fromDogDTOtoDogDomain(dogDTO: DogDTO): Dog {
+    fun fromDogDTOtoDogDomain(dogDTO: DogDTO): Dog {
         return Dog(
             dogDTO.id,
             dogDTO.index,

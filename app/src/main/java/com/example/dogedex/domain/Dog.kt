@@ -1,4 +1,4 @@
-package com.example.dogedex
+package com.example.dogedex.domain
 
 import android.os.Parcelable
 import kotlinx.parcelize.Parcelize
