@@ -4,8 +4,8 @@ import android.os.Parcelable
 import kotlinx.parcelize.Parcelize
 
 @Parcelize
-class Dog(
-    val id: Int,
+data class Dog(
+    val id: Long,
     val index: Int,
     val name: String,
     val type: String,
@@ -15,5 +15,8 @@ class Dog(
     val lifeExpectancy: String,
     val temperament: String,
     val weightFemale: String,
-    val weightMale: String
-) : Parcelable
+    val weightMale: String,
+    var inCollection: Boolean = true,
+) : Parcelable, Comparable<Dog> {
+    override fun compareTo(other: Dog) = if (this.index > other.index) 1 else -1
+}

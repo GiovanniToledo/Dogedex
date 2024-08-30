@@ -41,5 +41,11 @@ class User(val id: Long, val email: String, val authenticationToken: String) : P
                 ) ?: ""
             )
         }
+
+        fun logoutUser(activity: Activity) {
+            activity.getSharedPreferences(AUTH_PREFS, Context.MODE_PRIVATE).also {
+                it.edit().clear().apply()
+            }
+        }
     }
 }

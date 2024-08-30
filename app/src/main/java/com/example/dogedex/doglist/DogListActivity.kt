@@ -10,7 +10,6 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.core.view.isVisible
 import androidx.recyclerview.widget.GridLayoutManager
-import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.dogedex.R
 import com.example.dogedex.api.ApiResponseStatus
 import com.example.dogedex.databinding.ActivityDogListBinding
@@ -19,7 +18,7 @@ import com.example.dogedex.dogdetail.DogDetailActivity
 const val COLUMN_SPAN_COUNT = 3
 
 class DogListActivity : AppCompatActivity() {
-    private val dogListViewMode: DogListViewModel by viewModels()
+    private val dogListViewModel: DogListViewModel by viewModels()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -43,11 +42,15 @@ class DogListActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
-        dogListViewMode.dogList.observe(this) { dogList ->
+        dogAdapter.setOnLongItemClickListener {
+            dogListViewModel.addDogToUser(it.id)
+        }
+
+        dogListViewModel.dogList.observe(this) { dogList ->
             dogAdapter.submitList(dogList)
         }
 
-        dogListViewMode.status.observe(this) { status ->
+        dogListViewModel.status.observe(this) { status ->
             when (status) {
                 is ApiResponseStatus.Loading -> {
                     pbLoading.isVisible = true
@@ -68,7 +71,7 @@ class DogListActivity : AppCompatActivity() {
                 }
             }
         }
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
+        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.parent)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets

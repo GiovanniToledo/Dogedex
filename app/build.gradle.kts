@@ -58,5 +58,6 @@ dependencies {
     implementation(libs.androidx.activity.ktx)
     implementation(libs.com.square.retrofit2)
     implementation(libs.com.square.moshi)
-    implementation(libs.io.coil.kt)
+    implementation(libs.glide)
+    implementation(libs.jp.wasabeef.glide.transformations)
 }

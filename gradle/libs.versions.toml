@@ -17,6 +17,8 @@ kotlin-parcelize = "2.0.20"
 coilKtVersion = "2.7.0"
 navigationFragment = "2.7.7"
 nav-safe-args-version = "2.7.7"
+glide-version = "4.16.0"
+jp-wasabeef-version = "4.3.0"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -31,9 +33,11 @@ androidx-viewmodel-ktx = { group = "androidx.lifecycle", name = "lifecycle-viewm
 androidx-activity-ktx = { group = "androidx.activity", name = "activity-ktx", version.ref = "activityKtx" }
 com-square-retrofit2 = { group = "com.squareup.retrofit2", name = "retrofit", version.ref = "retrofit2"}
 com-square-moshi = { group = "com.squareup.retrofit2", name = "converter-moshi", version.ref = "retrofit2"}
-io-coil-kt = {group = "io.coil-kt", name = "coil", version.ref = "coilKtVersion"}
 androidx-navigation-fragment = { group = "androidx.navigation", name = "navigation-fragment", version.ref = "navigationFragment" }
 navigation-ui = { group = "androidx.navigation", name = "navigation-ui-ktx", version.ref = "nav-safe-args-version" }
+glide = { group = "com.github.bumptech.glide", name = "glide", version.ref = "glide-version"}
+jp-wasabeef-glide-transformations = { group = "jp.wasabeef", name = "glide-transformations", version.ref = "jp-wasabeef-version" }
+
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }

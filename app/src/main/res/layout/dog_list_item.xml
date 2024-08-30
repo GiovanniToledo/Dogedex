@@ -12,6 +12,16 @@
             android:background="@drawable/dog_list_item_background"
             android:gravity="center">
 
+            <TextView
+                android:id="@+id/tvDogIndex"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_margin="4dp"
+                android:textColor="@android:color/black"
+                android:visibility="gone" />
+
             <ImageView
                 android:id="@id/dog_image"
                 android:layout_width="match_parent"

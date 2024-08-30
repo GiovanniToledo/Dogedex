@@ -3,7 +3,7 @@ package com.example.dogedex.api.dto
 import com.squareup.moshi.Json
 
 class DogDTO(
-    val id: Int,
+    val id: Long,
     val index: Int,
     @field:Json(name = "name_en") val name: String,
     @field:Json(name = "dog_type") val type: String,

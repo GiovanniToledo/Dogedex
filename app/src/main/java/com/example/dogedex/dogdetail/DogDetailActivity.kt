@@ -4,10 +4,12 @@ import android.os.Bundle
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import coil.load
+import androidx.core.view.ViewCompat
+import androidx.core.view.WindowInsetsCompat
 import com.example.dogedex.domain.Dog
 import com.example.dogedex.R
 import com.example.dogedex.databinding.ActivityDogDetailBinding
+import com.example.dogedex.loadUrlImage
 
 class DogDetailActivity : AppCompatActivity() {
 
@@ -32,7 +34,13 @@ class DogDetailActivity : AppCompatActivity() {
         binding.lifeExpectancy.text =
             getString(R.string.dog_life_expectancy_format, dog.lifeExpectancy)
         binding.dog = dog
-        binding.dogImage.load(dog.imageUrl)
+        binding.dogImage.loadUrlImage(dog.imageUrl)
         binding.closeButton.setOnClickListener { finish() }
+
+        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.parent)) { v, insets ->
+            val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
+            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
+            insets
+        }
     }
 }

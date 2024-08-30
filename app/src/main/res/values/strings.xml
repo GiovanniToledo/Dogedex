@@ -25,4 +25,9 @@
     <string name="user_already_exist">User already exist!</string>
     <string name="unknown_error">There was an error!</string>
     <string name="wrong_user_or_pass">Wrong user email or password!</string>
+    <string name="take_photo_content_description">Take Photo Button</string>
+    <string name="dog_list_content_description">Dog List Button</string>
+    <string name="settings_content_description">Settings Button</string>
+    <string name="logout">Logout</string>
+    <string name="error_adding_dog">There was an error adding dog.</string>
 </resources>
