@@ -60,4 +60,7 @@ dependencies {
     implementation(libs.com.square.moshi)
     implementation(libs.glide)
     implementation(libs.jp.wasabeef.glide.transformations)
+    implementation(libs.camerax.camera2)
+    implementation(libs.camerax.lifecycle)
+    implementation(libs.camerax.view)
 }

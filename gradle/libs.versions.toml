@@ -19,6 +19,7 @@ navigationFragment = "2.7.7"
 nav-safe-args-version = "2.7.7"
 glide-version = "4.16.0"
 jp-wasabeef-version = "4.3.0"
+camerax-version = "1.4.0-rc01"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -37,6 +38,9 @@ androidx-navigation-fragment = { group = "androidx.navigation", name = "navigati
 navigation-ui = { group = "androidx.navigation", name = "navigation-ui-ktx", version.ref = "nav-safe-args-version" }
 glide = { group = "com.github.bumptech.glide", name = "glide", version.ref = "glide-version"}
 jp-wasabeef-glide-transformations = { group = "jp.wasabeef", name = "glide-transformations", version.ref = "jp-wasabeef-version" }
+camerax-camera2 = { group = "androidx.camera", name = "camera-camera2", version.ref = "camerax-version"}
+camerax-lifecycle = { group = "androidx.camera", name = "camera-lifecycle", version.ref = "camerax-version"}
+camerax-view = { group = "androidx.camera", name = "camera-view", version.ref = "camerax-version"}
 
 
 [plugins]
