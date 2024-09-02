@@ -10,7 +10,7 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.core.view.isVisible
 import androidx.navigation.findNavController
-import com.example.dogedex.MainActivity
+import com.example.dogedex.main.MainActivity
 import com.example.dogedex.R
 import com.example.dogedex.api.ApiResponseStatus
 import com.example.dogedex.databinding.ActivityLoginBinding

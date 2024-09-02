@@ -59,10 +59,6 @@ class DogAdapter : ListAdapter<Dog, DogAdapter.DogViewHolder>(DiffCallback) {
                 dogListItemLayout.setOnClickListener {
                     onItemClickListener?.invoke(dog)
                 }
-                dogListItemLayout.setOnLongClickListener {
-                    onLongItemClickListener?.invoke(dog)
-                    true
-                }
                 if (!dog.inCollection) {
                     tvDogIndex.isVisible = true
                     tvDogIndex.text = dog.index.toString()

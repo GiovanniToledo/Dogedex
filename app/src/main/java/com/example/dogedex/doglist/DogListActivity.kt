@@ -42,10 +42,6 @@ class DogListActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
-        dogAdapter.setOnLongItemClickListener {
-            dogListViewModel.addDogToUser(it.id)
-        }
-
         dogListViewModel.dogList.observe(this) { dogList ->
             dogAdapter.submitList(dogList)
         }

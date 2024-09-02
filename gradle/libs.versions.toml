@@ -20,6 +20,8 @@ nav-safe-args-version = "2.7.7"
 glide-version = "4.16.0"
 jp-wasabeef-version = "4.3.0"
 camerax-version = "1.4.0-rc01"
+tensorflow-version = "0.4.2"
+tensorflow-lite-support-version = "0.4.3"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -32,16 +34,17 @@ androidx-activity = { group = "androidx.activity", name = "activity", version.re
 androidx-constraintlayout = { group = "androidx.constraintlayout", name = "constraintlayout", version.ref = "constraintlayout" }
 androidx-viewmodel-ktx = { group = "androidx.lifecycle", name = "lifecycle-viewmodel-ktx", version.ref = "lifecycleViewModelKtx" }
 androidx-activity-ktx = { group = "androidx.activity", name = "activity-ktx", version.ref = "activityKtx" }
-com-square-retrofit2 = { group = "com.squareup.retrofit2", name = "retrofit", version.ref = "retrofit2"}
-com-square-moshi = { group = "com.squareup.retrofit2", name = "converter-moshi", version.ref = "retrofit2"}
+com-square-retrofit2 = { group = "com.squareup.retrofit2", name = "retrofit", version.ref = "retrofit2" }
+com-square-moshi = { group = "com.squareup.retrofit2", name = "converter-moshi", version.ref = "retrofit2" }
 androidx-navigation-fragment = { group = "androidx.navigation", name = "navigation-fragment", version.ref = "navigationFragment" }
 navigation-ui = { group = "androidx.navigation", name = "navigation-ui-ktx", version.ref = "nav-safe-args-version" }
-glide = { group = "com.github.bumptech.glide", name = "glide", version.ref = "glide-version"}
+glide = { group = "com.github.bumptech.glide", name = "glide", version.ref = "glide-version" }
 jp-wasabeef-glide-transformations = { group = "jp.wasabeef", name = "glide-transformations", version.ref = "jp-wasabeef-version" }
-camerax-camera2 = { group = "androidx.camera", name = "camera-camera2", version.ref = "camerax-version"}
-camerax-lifecycle = { group = "androidx.camera", name = "camera-lifecycle", version.ref = "camerax-version"}
-camerax-view = { group = "androidx.camera", name = "camera-view", version.ref = "camerax-version"}
-
+camerax-camera2 = { group = "androidx.camera", name = "camera-camera2", version.ref = "camerax-version" }
+camerax-lifecycle = { group = "androidx.camera", name = "camera-lifecycle", version.ref = "camerax-version" }
+camerax-view = { group = "androidx.camera", name = "camera-view", version.ref = "camerax-version" }
+tensor-flow-lite = { group = "org.tensorflow", name = "tensorflow-lite", version.ref = "tensorflow-version" }
+tensor-flow-lite-support = { group = "org.tensorflow", name = "tensorflow-lite-support", version.ref = "tensorflow-lite-support-version" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }

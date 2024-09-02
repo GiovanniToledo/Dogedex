@@ -63,4 +63,8 @@ dependencies {
     implementation(libs.camerax.camera2)
     implementation(libs.camerax.lifecycle)
     implementation(libs.camerax.view)
+    // Tensorflow Lite dependencies
+    implementation(libs.tensor.flow.lite)
+    implementation(libs.tensor.flow.lite.support)
+
 }

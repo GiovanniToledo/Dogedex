@@ -15,8 +15,8 @@ class DogRepository {
 
     suspend fun getDogCollection(): ApiResponseStatus<List<Dog>> {
         return withContext(Dispatchers.IO) {
-            val allDogsListDeferred = async {downloadDogs()}
-            val userDogsListDeferred = async {getUserDogs()}
+            val allDogsListDeferred = async { downloadDogs() }
+            val userDogsListDeferred = async { getUserDogs() }
             val allDogsListResponse = allDogsListDeferred.await()
             val userDogsListResponse = userDogsListDeferred.await()
 
@@ -77,5 +77,15 @@ class DogRepository {
         if (!defaultResponse.isSuccess) {
             throw Exception(defaultResponse.message)
         }
+    }
+
+    suspend fun getDogByMlId(mlDogId: String): ApiResponseStatus<Dog> = makeNetworkCall {
+        val defaultResponse = retrofitService.getDogByMlId(mlDogId)
+        if (!defaultResponse.isSuccess) {
+            throw Exception(defaultResponse.message)
+        }
+
+        val dogDTOMapper = DogDTOMapper()
+        dogDTOMapper.fromDogDTOtoDogDomain(defaultResponse.data.dog)
     }
 }
